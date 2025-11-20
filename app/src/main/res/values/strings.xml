@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Promt project</string>
+    <string-array name="Agama">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Katholik</item>
+        <item>Hindu</item>
+        <item>Buddha</item>
+        <item>Konghuchu</item>
+    </string-array>
+
+    <string-array name="mie">
+        <item>Udah cukup</item>
+        <item>Tambah dikit</item>
+        <item>Sampai kenyang</item>
+    </string-array>
+</resources>
