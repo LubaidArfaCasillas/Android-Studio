@@ -97,7 +97,7 @@ class form_pendaftaran : AppCompatActivity() {
         //langkah 3 mengisikan variabel
         etNama = findViewById(R.id.etNama)
         etAlamat = findViewById(R.id.etAlamat)
-        etNomor = findViewById(R.id.etNomor)
+        etNomor = findViewById(R.id.etNoHP)
         spAgama = findViewById(R.id.spAgama)
         rgKelamin = findViewById(R.id.rgKelamin)
         cbMembaca = findViewById(R.id.cbMembaca)

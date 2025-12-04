@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -9,133 +10,199 @@
     android:layout_marginHorizontal="10dp"
     tools:context=".form_pendaftaran">
 
-    <EditText
-        android:id="@+id/etNama"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan nama lengkap"
-        android:inputType="textPersonName"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/tvForm"/>
+        android:layout_height="match_parent">
 
-
-    <EditText
-        android:id="@+id/etAlamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan alamat lengkap"
-        android:inputType="textPostalAddress"
-        android:layout_below="@+id/etNama"/>
-
-    <EditText
-        android:id="@+id/etNomor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan nomor HP"
-        android:layout_below="@id/etAlamat"/>
-
-    <Button
-        android:id="@+id/btSimpan"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:text="Simpan"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/cbBermain"/>
-
-    <TextView
-        android:id="@+id/tvAgama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Agama"
-        android:textStyle="normal"
-        android:layout_below="@+id/etNomor"/>
-
-    <Spinner
-        android:id="@+id/spAgama"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/tvAgama"
-        android:entries="@array/Agama"/>
-
-    <TextView
-        android:id="@+id/tvKelamin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Jenis Kelamin"
-        android:layout_below="@id/spAgama"/>
-
-    <RadioGroup
-        android:id="@+id/rgKelamin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvKelamin"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/rbLaki"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Laki - laki"/>
-
-        <RadioButton
-            android:id="@+id/rbPerempuan"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Perempuan"/>
-    </RadioGroup>
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/tvForm"
+            android:hint="Nama Lengkap"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp">
 
-    <TextView
-        android:id="@+id/tvHobi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Hobi"
-        android:layout_below="@+id/rgKelamin"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
 
-    <CheckBox
-        android:id="@+id/cbMembaca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Membaca"
-        android:layout_below="@+id/tvHobi"/>
-
-    <CheckBox
-        android:id="@+id/cbTidur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tidur"
-        android:layout_below="@+id/cbMembaca" />
-
-    <CheckBox
-        android:id="@+id/cbBelajar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Belajar"
-        android:layout_below="@id/cbTidur"/>
-
-    <CheckBox
-        android:id="@+id/cbBermain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bermain"
-        android:layout_below="@+id/cbBelajar"/>
-
-    <TextView
-        android:id="@+id/tvForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Form Pendaftaran"
-        android:textSize="25sp"
-        android:layout_centerHorizontal="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-</RelativeLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAlamat"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tilNama"
+            android:hint="Alamat lengkap"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNoHP"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/tilAlamat"
+            android:hint="Nomor HP"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNoHP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btSimpan"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Simpan"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#FF4500"
+            android:layout_below="@+id/cbBermain"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/tvAgama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="10dp"
+            android:text="Agama"
+            android:textSize="20sp"
+            android:layout_below="@+id/tilNoHP"/>
+
+        <Spinner
+            android:id="@+id/spAgama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/tvAgama"
+            android:entries="@array/Agama"/>
+
+        <TextView
+            android:id="@+id/tvKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:text="Jenis Kelamin"
+            android:textSize="20sp"
+            android:layout_below="@id/spAgama"/>
+
+        <RadioGroup
+            android:id="@+id/rgKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvKelamin"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki - laki"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Perempuan"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvHobi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Hobi"
+            android:textSize="20sp"
+            android:layout_below="@+id/rgKelamin"/>
+
+        <CheckBox
+            android:id="@+id/cbMembaca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Membaca"
+            android:layout_below="@+id/tvHobi"
+            android:layout_marginStart="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cbTidur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidur"
+            android:layout_below="@+id/cbMembaca"
+            android:layout_marginStart="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cbBelajar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belajar"
+            android:layout_below="@id/cbTidur"
+            android:layout_marginStart="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cbBermain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bermain"
+            android:layout_below="@+id/cbBelajar"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/tvForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Form Pendaftaran"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/btSimpan"/>
+
+    </RelativeLayout>
+
+</ScrollView>

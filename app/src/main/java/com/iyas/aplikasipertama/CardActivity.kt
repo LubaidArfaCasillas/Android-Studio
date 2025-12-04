@@ -8,15 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.appcompat.app.AlertDialog // <-- Import untuk AlertDialog
 
 class CardActivity : AppCompatActivity() {
     //langkah 1
-    //membat variabel
-    lateinit var card_Home : CardView
-    lateinit var card_Bantuan : CardView
-    lateinit var card_Pegawai : CardView
-    lateinit var card_Galeri : CardView
-    lateinit var card_Survei : CardView
+    //membuat variabel
+    lateinit var card_Form : CardView
+    lateinit var card_RumahMakan : CardView
+    lateinit var card_Kalkulator : CardView
+    lateinit var card_KonversiSuhu : CardView
+    lateinit var card_Profile : CardView
     lateinit var card_Keluar : CardView
 
 
@@ -29,44 +30,44 @@ class CardActivity : AppCompatActivity() {
         init()
 
 
-
         //langkah 5
         //menambahkan kode onClick pada cardView
 
-        card_Home.setOnClickListener {
+        card_Form.setOnClickListener {
             Toast.makeText( this@CardActivity, "Card View Home Diklik", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@CardActivity,form_pendaftaran::class.java)
             intent.putExtra("Nama", "Iyas")
             intent.putExtra("Alamat", "Sukoharjo")
             startActivity(intent)
         }
-        card_Bantuan.setOnClickListener {
+        card_RumahMakan.setOnClickListener {
             Toast.makeText(this@CardActivity, "Card View Bantuan Diklik", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@CardActivity,kalkulator::class.java)
+            val intent = Intent(this@CardActivity,RumahMakan::class.java)
             intent.putExtra("Nama", "Iyas")
             intent.putExtra("Alamat", "Sukoharjo")
             startActivity(intent)
         }
-        card_Pegawai.setOnClickListener {
+        card_Kalkulator.setOnClickListener {
             Toast.makeText( this@CardActivity, "Card View Pegawai Diklik", Toast.LENGTH_SHORT).show()
-            val intent = Intent (this@CardActivity, RumahMakan::class.java)
+            val intent = Intent (this@CardActivity, kalkulator::class.java)
             startActivity(intent)
         }
-        card_Galeri.setOnClickListener {
+        card_KonversiSuhu.setOnClickListener {
             Toast.makeText( this@CardActivity, "Card View Galeri Diklik", Toast.LENGTH_SHORT).show()
+            val intent = Intent (this@CardActivity, konversiSuhu::class.java)
+            startActivity(intent)
         }
-        card_Survei.setOnClickListener {
+        card_Profile.setOnClickListener {
             Toast.makeText( this@CardActivity, "Card View Survei Diklik", Toast.LENGTH_SHORT).show()
+            val intent = Intent (this@CardActivity, profile::class.java)
+            startActivity(intent)
         }
+
+        // LOGIKA POP-UP KELUAR
         card_Keluar.setOnClickListener {
-            Toast.makeText(this@CardActivity, "Card View Bantuan Diklik", Toast.LENGTH_SHORT).show()
+            // Memanggil fungsi pop-up konfirmasi saat card_Keluar diklik
+            showExitConfirmationDialog()
         }
-
-
-
-
-
-
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -82,13 +83,32 @@ class CardActivity : AppCompatActivity() {
 
         //langkah 3
         //mengisikan variabel
-        card_Home = findViewById(R.id.cvBeranda)
-        card_Bantuan = findViewById(R.id.cvBantuan)
-        card_Pegawai = findViewById(R.id.cvPegawai)
-        card_Galeri = findViewById(R.id.cvGaleri)
-        card_Survei = findViewById(R.id.cvSurvei)
+        card_Form = findViewById(R.id.cvForm)
+        card_RumahMakan = findViewById(R.id.cvRumahMakan)
+        card_Kalkulator = findViewById(R.id.cvKalkulator)
+        card_KonversiSuhu = findViewById(R.id.cvKonversiSuhu)
+        card_Profile = findViewById(R.id.cvProfile)
         card_Keluar = findViewById(R.id.cvKeluar)
+    }
 
+    // FUNGSI UNTUK MENAMPILKAN ALERT DIALOG (POP-UP)
+    private fun showExitConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
 
+        builder.setTitle("Konfirmasi Keluar")
+        builder.setMessage("Yakin ingin keluar dari aplikasi?")
+
+        // Tombol Ya/Positive Button
+        builder.setPositiveButton("Ya") { dialog, which ->
+            finish() // Menutup Activity dan keluar dari aplikasi
+        }
+
+        // Tombol Tidak/Negative Button
+        builder.setNegativeButton("Tidak") { dialog, which ->
+            dialog.dismiss() // Hanya menutup pop-up
+        }
+
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 }

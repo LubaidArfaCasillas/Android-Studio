@@ -6,274 +6,294 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RumahMakan"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    tools:context=".RumahMakan">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tvJudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Makan Aja Dulu"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/tvMakan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prioritas utama :"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudul"/>
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="25dp"
+            android:text="Makan Aja Dulu"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMakan"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMakan"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="#FAF9F9">
-
-        <LinearLayout
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNamaPemesan"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/mie"
-                android:layout_marginStart="10dp">
-            </ImageView>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="30dp"
+            android:hint="Nama Pemesan"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvJudul"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNamaPemesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mie-ras"
-                    android:textSize="20sp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="8dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-                <Spinner
-                    android:id="@+id/spMie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="1dp"
-                    android:entries="@array/mie"/>
+        <TextView
+            android:id="@+id/tvMakan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prioritas utama :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilNamaPemesan"/>
 
-                <TextView
-                    android:id="@+id/tvHargaMie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp. 10.000"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
-            </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMakan"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMakan"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="#FAF9F9">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/etMie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:inputType="number"
-                    android:hint="Jumlah"
-                    android:textSize="20sp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/mie"
+                    android:layout_marginStart="10dp">
+                </ImageView>
 
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvCemilan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seken cois :"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintTop_toBottomOf="@+id/cvMakan"
-        tools:ignore="MissingConstraints">
-    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mie-ras"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCemilan"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvCemilan"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="#FAF9F9">
+                    <TextView
+                        android:id="@+id/tvHargaMie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 10.000"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/roti"
-                android:layout_marginStart="10dp">
-            </ImageView>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Roti kobong"
-                    android:textSize="20sp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="8dp"/>
-
-                <Spinner
-                    android:id="@+id/spKopi"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="1dp"
-                    android:entries="@array/mie"/>
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tvHargaKopi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp. 7.000"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
+                    <EditText
+                        android:id="@+id/etMie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="Jumlah"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvCemilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seken cois :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/cvMakan"
+            tools:ignore="MissingConstraints">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCemilan"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCemilan"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="#FAF9F9">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/etKopi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="45dp"
-                    android:inputType="number"
-                    android:hint="Jumlah"
-                    android:textSize="20sp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/roti"
+                    android:layout_marginStart="10dp">
+                </ImageView>
 
-    <TextView
-        android:id="@+id/tvMinum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Penghilang dahaga :"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvCemilan"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvMinum"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvMinum"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="#FAF9F9">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Roti kobong"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/kopi"
-                android:layout_marginStart="10dp">
-            </ImageView>
+                    <TextView
+                        android:id="@+id/tvHargaKopi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 7.000"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Si anti ngantuk"
-                    android:textSize="20sp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="8dp"/>
-
-                <Spinner
-                    android:id="@+id/spRoti"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="1dp"
-                    android:entries="@array/mie"/>
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tvHargaRoti"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rp. 9.000"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
+                    <EditText
+                        android:id="@+id/etRoti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="Jumlah"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvMinum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Penghilang dahaga :"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCemilan"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMinum"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMinum"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="#FAF9F9">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/kopi"
+                    android:layout_marginStart="10dp">
+                </ImageView>
 
-                <EditText
-                    android:id="@+id/etRoti"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="45dp"
-                    android:inputType="number"
-                    android:hint="Jumlah"
-                    android:textSize="20sp"/>
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caffeine Rush"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"/>
+
+                    <TextView
+                        android:id="@+id/tvHargaRoti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 9.000"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/etKopi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="Jumlah"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btPesan"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textColor="#FAFAFA"
-        android:text="Pesan besok"
-        android:backgroundTint="#FF4500"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvMinum"/>
+        <Button
+            android:id="@+id/btPesan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="#FAFAFA"
+            android:text="Pesan besok"
+            android:backgroundTint="#FF4500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvMinum"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/btPesan"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

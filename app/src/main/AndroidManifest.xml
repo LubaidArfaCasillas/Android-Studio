@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplikasiPertama">
         <activity
+            android:name=".konversiSuhu"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".Nota"
             android:exported="false" />
         <activity
@@ -30,17 +36,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Constraint2"
-            android:exported="false" />
-        <activity
             android:name=".kalkulator"
             android:exported="false" />
         <activity
             android:name=".form_pendaftaran"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>
