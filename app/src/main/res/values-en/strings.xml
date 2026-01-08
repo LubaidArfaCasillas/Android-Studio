@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Promt project</string>
+
+<!--Bahasa-->
+    <!--Halaman utama-->
+        <string name="proyek">Projects</string>
+        <string name="rumah_makan">Restaurant</string>
+        <string name="kalkulator">Calculator</string>
+        <string name="konversi_suhu">Temperature Converter</string>
+        <string name="profil">Profile</string>
+        <string name="keluar">Exit</string>
+
+    <!--Form pendaftaran-->
+        <string name="form_pendaftaran">Registration Form</string>
+        <string name="nama_lengkap">Full Name</string>
+        <string name="almat_lengkap">Full Address</string>
+        <string name="no_hp">Phone Number</string>
+        <string name="agama">Religion</string>
+        <string name="jenis_kelamin">Gender</string>
+        <string name="laki_laki">Male</string>
+        <string name="perempuan">Female</string>
+        <string name="hobi">Hobbies</string>
+        <string name="membaca">Reading</string>
+        <string name="tidur">Sleeping</string>
+        <string name="belajar">Studying</string>
+        <string name="bermain">Playing</string>
+        <string name="simpan"> Save </string>
+        <string name="hasil_form_pendaftaran">Registration Form Result</string>
+
+    <!--Rumah makan-->
+        <string name="nama_pemesan">Customer Name</string>
+        <string name="prioritas_utama">Main Priority</string>
+        <string name="jumlah">Quantity</string>
+        <string name="seken_cois">Second Choice</string>
+        <string name="penghilang_dahaga">Thirst Quencher</string>
+        <string name="pesan_besok">Order for Tomorrow</string>
+        <string name="detail_pesanan">Order Details</string>
+    <string name="total_pembayaran">Total Payment : Rp. 0</string>
+
+    <!--Konverter suhu-->
+        <string name="suhu_awal">Initial Temperature</string>
+        <string name="hasil_suhu">Temperature Result</string>
+        <string name="hitung">Calculate</string>
+
+    <!--Profil-->
+        <string name="pelajar">Student</string>
+        <string name="programmer_junior">Junior software engineer </string>
+        <string name="postingan">Posts</string>
+        <string name="pengikut">Followers</string>
+        <string name="mengikuti">Following</string>
+        <string name="tentang_saya">About Me</string>
+        <string name="data_diri">Personal Data</string>
+        <string name="TTL">Birth</string>
+        <string name="Keahlian">Skills</string>
+        <string name="pendidikan">Education</string>
+        <string name="media_sosial">Social Media</string>
+
+</resources>
