@@ -24,4 +24,59 @@
     </string-array>
 
 
+<!--Bahasa-->
+    <!--Halaman utama-->
+        <string name="proyek"> Proyek </string>
+        <string name="rumah_makan"> Rumah Makan </string>
+        <string name="kalkulator"> Kalkulator </string>
+        <string name="konversi_suhu"> Konversi Suhu </string>
+        <string name="profil"> Profil </string>
+        <string name="keluar"> Keluar </string>
+
+    <!--Form pendaftaran-->
+        <string name="form_pendaftaran"> Formulir Pendaftaran </string>
+        <string name="nama_lengkap"> Nama lengkap </string>
+        <string name="almat_lengkap"> Alamat lengkap </string>
+        <string name="no_hp"> No HP </string>
+        <string name="agama"> Agama </string>
+        <string name="jenis_kelamin"> Jenis kelamin </string>
+        <string name="laki_laki"> Laki - laki </string>
+        <string name="perempuan"> Perempuan </string>
+        <string name="hobi"> Hobi </string>
+        <string name="membaca"> Membaca </string>
+        <string name="tidur"> Tidur </string>
+        <string name="belajar"> Belajar </string>
+        <string name="bermain"> Bermain </string>
+        <string name="simpan"> Simpan </string>
+        <string name="hasil_form_pendaftaran"> Hasil Form Pendaftaran </string>
+
+    <!--Rumah makan-->
+        <string name="nama_pemesan"> Nama Pemesan </string>
+        <string name="prioritas_utama"> Prioritas utama </string>
+        <string name="jumlah"> Jumlah </string>
+        <string name="seken_cois"> Seken cois </string>
+        <string name="penghilang_dahaga"> Penghilang dahaga </string>
+        <string name="pesan_besok"> Pesan besok </string>
+        <string name="detail_pesanan"> Detail Pesanan </string>
+        <string name="total_pembayaran"> Total Pembayaran : Rp. 0</string>
+
+    <!--Konverter suhu-->
+        <string name="suhu_awal"> Suhu awal </string>
+        <string name="hasil_suhu"> Hasil suhu </string>
+        <string name="hitung"> Hitung </string>
+
+    <!--Profil-->
+        <string name="pelajar"> Pelajar </string>
+        <string name="programmer_junior"> Programmer Junior </string>
+        <string name="postingan"> Postingan </string>
+        <string name="pengikut"> Pengikut </string>
+        <string name="mengikuti"> Mengikuti </string>
+        <string name="tentang_saya"> Tentang saya </string>
+        <string name="data_diri"> Data diri </string>
+        <string name="TTL"> TTL </string>
+        <string name="Keahlian"> Keahlian</string>
+        <string name="pendidikan"> Pendidikan</string>
+        <string name="media_sosial"> Media sosial</string>
+
+
 </resources>

@@ -44,7 +44,7 @@
                     android:id="@+id/tvNamaPemesan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Pemesan : "
+                    android:text="@string/nama_pemesan"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Detail Pesanan :"
+                    android:text="@string/detail_pesanan"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_marginBottom="10dp"/>
@@ -97,7 +97,7 @@
                     android:id="@+id/tvTotalHarga"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Total Pembayaran : Rp. 0"
+                    android:text="@string/total_pembayaran"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="#FF4500"/>

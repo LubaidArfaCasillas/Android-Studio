@@ -23,7 +23,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="30dp"
             android:layout_below="@id/tvForm"
-            android:hint="Nama Lengkap"
+            android:hint="@string/nama_lengkap"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusTopEnd="8dp"
@@ -47,7 +47,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="15dp"
             android:layout_below="@id/tilNama"
-            android:hint="Alamat lengkap"
+            android:hint="@string/almat_lengkap"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusTopEnd="8dp"
@@ -71,7 +71,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="15dp"
             android:layout_below="@id/tilAlamat"
-            android:hint="Nomor HP"
+            android:hint="@string/no_hp"
             app:boxCornerRadiusBottomEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusTopEnd="8dp"
@@ -89,7 +89,7 @@
             android:id="@+id/btSimpan"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:text="Simpan"
+            android:text="@string/simpan"
             android:layout_centerHorizontal="true"
             android:backgroundTint="#FF4500"
             android:layout_below="@+id/cbBermain"
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginStart="10dp"
-            android:text="Agama"
+            android:text="@string/agama"
             android:textSize="20sp"
             android:layout_below="@+id/tilNoHP"/>
 
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginStart="10dp"
-            android:text="Jenis Kelamin"
+            android:text="@string/jenis_kelamin"
             android:textSize="20sp"
             android:layout_below="@id/spAgama"/>
 
@@ -135,15 +135,15 @@
                 android:id="@+id/rbLaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Laki - laki"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginStart="10dp"
+                android:text="@string/laki_laki" />
 
             <RadioButton
                 android:id="@+id/rbPerempuan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Perempuan"/>
+                android:text="@string/perempuan"/>
         </RadioGroup>
 
         <TextView
@@ -152,7 +152,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
-            android:text="Hobi"
+            android:text="@string/hobi"
             android:textSize="20sp"
             android:layout_below="@+id/rgKelamin"/>
 
@@ -160,7 +160,7 @@
             android:id="@+id/cbMembaca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Membaca"
+            android:text="@string/membaca"
             android:layout_below="@+id/tvHobi"
             android:layout_marginStart="10dp"/>
 
@@ -168,7 +168,7 @@
             android:id="@+id/cbTidur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tidur"
+            android:text="@string/tidur"
             android:layout_below="@+id/cbMembaca"
             android:layout_marginStart="10dp"/>
 
@@ -176,7 +176,7 @@
             android:id="@+id/cbBelajar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belajar"
+            android:text="@string/belajar"
             android:layout_below="@id/cbTidur"
             android:layout_marginStart="10dp"/>
 
@@ -184,7 +184,7 @@
             android:id="@+id/cbBermain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bermain"
+            android:text="@string/bermain"
             android:layout_below="@+id/cbBelajar"
             android:layout_marginStart="10dp"/>
 
@@ -193,7 +193,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Form Pendaftaran"
+            android:text="@string/form_pendaftaran"
             android:textSize="25sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"/>

@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Project"
+                    android:text="@string/proyek"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -96,7 +96,7 @@
                             android:id="@+id/tvForm"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Form"
+                            android:text="@string/form_pendaftaran"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/HomePic" />
@@ -133,7 +133,7 @@
                             android:id="@+id/tvRumahMakan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rumah Makan"
+                            android:text="@string/rumah_makan"
                             app:layout_constraintTop_toBottomOf="@id/Logoss"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"/>
@@ -170,7 +170,7 @@
                             android:id="@+id/tvKalkulator"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kalkulator"
+                            android:text="@string/kalkulator"
                             app:layout_constraintTop_toBottomOf="@id/HomePic3"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -235,7 +235,7 @@
                             android:id="@+id/tvKonversiSuhu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Konversi Suhu"
+                            android:text="@string/konversi_suhu"
                             app:layout_constraintTop_toBottomOf="@id/HomePic4"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
@@ -273,7 +273,7 @@
                             android:id="@+id/tvProfile"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Profile"
+                            android:text="@string/profil"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/Logosss" />
@@ -310,7 +310,7 @@
                             android:id="@+id/tvKeluar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Keluar"
+                            android:text="@string/keluar"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/Logossss" />

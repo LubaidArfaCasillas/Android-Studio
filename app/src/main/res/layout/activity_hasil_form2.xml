@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hasil Form Pendaftaran"
+        android:text="@string/hasil_form_pendaftaran"
         android:textSize="25sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
@@ -34,14 +34,14 @@
             android:id="@+id/tvNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nama lengkap : "
+            android:text="@string/nama_lengkap"
             android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/tvAlamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alamat : "
+                android:text="@string/almat_lengkap"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"/>
 
@@ -49,7 +49,7 @@
                 android:id="@+id/tvNomor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nomor HP : "
+                android:text="@string/no_hp"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"/>
 
@@ -57,7 +57,7 @@
                 android:id="@+id/tvAgama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Agama : "
+                android:text="@string/agama"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"/>
 
@@ -65,7 +65,7 @@
                 android:id="@+id/tvKelamin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jenis kelamin : "
+                android:text="@string/jenis_kelamin"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"/>
 
@@ -73,7 +73,7 @@
                 android:id="@+id/tvHobi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hobi : "
+                android:text="@string/hobi"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"/>
 
